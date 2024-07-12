@@ -16,3 +16,12 @@ def solution(age):
 def compare_numbers(num1, num2):
     return 1 if num1 == num2 else -1
 
+# 두 수의 합 / 근데 프로그래머스에서는 함수명을 solution으로 해야만 정답처리를 한다.
+def plus_numbers(num1, num2):
+    return num1 + num2
+
+# 두 수의 나눗셈
+def solution(num1, num2):
+    return int((num1 / num2)*1000)
+
+
