@@ -49,4 +49,37 @@ def solution(n):
             even_sum
     return even_sum
 
+# 배열의 합
+def solution(numbers):
+    average_num = sum(numbers)/len(numbers)
+    return average_num
+
+# 정수 num이 짝수일 경우 "Even"을 반환하고 홀수인 경우 "Odd"를 반환하는 함수, solution을 완성하시오
+def solution(num):
+    num = int(num)
+    if num % 2 == 0 :
+        return "Even"
+    else:
+        return "Odd"
+
+# 평균 구하기 (정수를 담고 있는 배열 arr의 평균값을 return하는 함수, solution을 완성하시오)
+def solution(arr):
+    answer = sum(arr)/len(arr)
+    return answer
+
+# 자릿수 더하기
+# 자연수 N이 주어지면, N의 각 자릿수의 합을 구해서 return 하는 solution 함수를 만들어 주세요.
+# 예를들어 N = 123이면 1 + 2 + 3 = 6을 return 하면 됩니다.
+def solution(n):
+    n_str = str(n)
+    sum_digit = 0
+    for digit in n_str :
+        digit_int = int(digit)
+        sum_digit += digit_int
+    return sum_digit
+
+# map 사용하니까 더 간단하게 구할 수 있다.
+def solution(n):
+    n_str = str(n)
+    return sum(map(int, n_str))
 
