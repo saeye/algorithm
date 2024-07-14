@@ -4,3 +4,6 @@
 # 3을 버리면 42가 되고, 4를 밑으로 옮기면 24가 된다. 마지막으로 2를 버리고 나면, 남는 카드는 4가 된다.
 # N이 주어졌을 때, 제일 마지막에 남게 되는 카드를 구하는 프로그램을 작성하시오.
 
+from collections import deque
+def last_card_deq(num):
+    deq = deque
