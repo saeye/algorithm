@@ -6,3 +6,12 @@ def solution(n):
 
 print(*map(int, str(132)))
 print(solution(132))
+
+x = 1234
+for digit in str(x):
+    print(digit)
+
+list = [1]
+
+if list:
+    print("Qyd")

@@ -5,5 +5,31 @@
 # N이 주어졌을 때, 제일 마지막에 남게 되는 카드를 구하는 프로그램을 작성하시오.
 
 from collections import deque
+
 def last_card_deq(num):
-    deq = deque
+    card_numbers = list(i for i in range(1, num + 1))
+    deq = deque(card_numbers)
+
+    while len(deq) > 1:  # 카드 한장 남을 때까지 반복
+        deq.popleft()    # 맨 위(맨 왼쪽) 카드 제거
+        deq.append(deq.popleft())  # 맨 위(맨 왼쪽) 카드를 맨 오른쪽으로 이동
+    return deq.popleft() # 마지막 남은 카드 반환
+
+print(last_card_deq(4))
+print(last_card_deq(5))
+print(last_card_deq(6))
+print(last_card_deq(7))
+
+
+def last_card_deq(num):
+    deq = deque(range(1, num + 1)) # 1부터 n까지의 카드를 데크에 바로 넣어어서 리스트화 한다.
+
+    while len(deq) > 1:  # 카드 한장 남을 때까지 반복
+        deq.popleft()    # 맨 위(맨 왼쪽) 카드 제거
+        deq.append(deq.popleft())  # 맨 위(맨 왼쪽) 카드를 맨 오른쪽으로 이동
+    return deq.popleft() # 마지막 남은 카드 반환
+
+print(last_card_deq(4))
+print(last_card_deq(5))
+print(last_card_deq(6))
+print(last_card_deq(7))
