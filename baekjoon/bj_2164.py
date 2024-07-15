@@ -21,6 +21,8 @@ print(last_card_deq(6))
 print(last_card_deq(7))
 
 
+# card_numbers list를 따로 만들지 않고 바로 deq의 객체로 넣어서 수정한 코드
+
 def last_card_deq(num):
     deq = deque(range(1, num + 1)) # 1부터 n까지의 카드를 데크에 바로 넣어어서 리스트화 한다.
 
