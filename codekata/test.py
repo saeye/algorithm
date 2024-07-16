@@ -1,17 +1,8 @@
-def solution(n):
-    n_list = list((map(int, str(n))))
-    reversed_list = sorted(n_list, reverse=True)
-    reversed_list_to_int = int(''.join(map(str, reversed_list))) # join은 문자열로 구성된 것만 결합
-    return reversed_list_to_int
+a = [1,2,3,4]
 
-print(*map(int, str(132)))
-print(solution(132))
+min(a)
 
-x = 1234
-for digit in str(x):
-    print(digit)
+a.remove(min(a))
 
-list = [1]
-
-if list:
-    print("Qyd")
+print(min(a))
+print(a.remove(min(a)))

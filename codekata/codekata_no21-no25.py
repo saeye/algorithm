@@ -54,4 +54,35 @@ def solution(num):
 print(solution(6))
 
 
-# 23.
+# 24. 서울에서 김서방 찾기
+# String형 배열 seoul의 element중 "Kim"의 위치 x를 찾아, "김서방은 x에 있다"는 String을 반환하는 함수, solution을 완성하세요.
+# seoul에 "Kim"은 오직 한 번만 나타나며 잘못된 값이 입력되는 경우는 없습니다.
+# 입출력 예
+# seoul = ["Jane", "Kim"]
+# "김서방은 1에 있다"
+
+def solution(seoul):
+    x = seoul.index("Kim")
+    return f"김서방은 {x}에 있다"
+
+seoul = ["Kim", "Lee", "Jane"]
+print(solution(seoul))
+
+
+# 25.나누어 떨어지는 숫자 배열
+# array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.
+# divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.
+def solution(arr, divisor):
+
+    valid_arrays = [i for i in arr if i % divisor == 0] # arr를 돌면서 divisor로 나누었을 때 떨어지는 요소 i 리스트 생성
+
+    if not valid_arrays: # 만약 나누어 떨어지는 요소가 없으면
+        return [-1]        # 배열에 -1을 담아 반환
+
+    valid_arrays.sort()  # 오름차순 정렬 ( sort()메소드는 정렬을 할 뿐 None을 반환한다)
+
+    return valid_arrays
+
+print(solution([5,9,7,10], 5))
+print(solution([5,9,7], 10))
+
