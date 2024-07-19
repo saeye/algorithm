@@ -81,3 +81,24 @@ def solution(numbers):
 
 print(solution([4,3,2,1]))
 print(solution([10]))
+
+
+# 30. 가운데 글자 가져오기
+# 단어 s의 가운데 글자를 반환하는 함수, solution을 만들어 보세요. 단어의 길이가 짝수라면 가운데 두글자를 반환하면 됩니다.
+
+# [풀이]
+# 문자열의 길이 구하기
+# 짝 홀 판단
+# 가운데 문자 return
+
+def solution(s):
+    s_word = list(s)
+    if len(s_word) % 2 == 1:
+        return s_word[(len(s_word) // 2)]
+    else:
+        return ''.join(s_word[(len(s_word) // 2) - 1 : (len(s_word) // 2) + 1])
+
+print(solution("abcde"))
+print(solution("abcd"))
+print(solution("12345"))
+print(solution("123456"))
