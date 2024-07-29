@@ -1,12 +1,16 @@
 # no.51 푸드파이트 대회
 
 def solution(food):
-    food_list = []
-    for i in food[1:]:
-        food_list.extend([i]*int(i))
-        food_list.sort()
-        if i // 2 == 1:
-            int(i) - 1
-            print(food_list)
+    left_side = []
 
-print(solution([1, 7, 2]))
+    # 음식의 개수로 좌측 부분 생성
+    for i in range(1, len(food)):
+        count = food[i] // 2
+        left_side.extend([str(i)] * count)
+
+    # 좌측과 우측 대칭 문자열 생성
+    result = ''.join(left_side) + '0' + ''.join(left_side[::-1])
+
+    return result
+
+solution([1, 3, 4, 6])

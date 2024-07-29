@@ -1,8 +1,6 @@
 class Person:
-    age = 19
-    def __init__(self, name, age):
+    def __init__(self, name):
         self.name = name
-        self.age = age
 
     @classmethod
     def hello(cls):
